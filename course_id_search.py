@@ -13,6 +13,10 @@ def find_course_data(course_file, search_term):
                 course_ids.append(line[:-2].rstrip().replace('"', '').strip())
                 found = True
     if found:
+        course_id_file = open("course_ids", "a")
+        if len(course_ids) == 1:
+            for id in course_ids:
+                course_id_file.write(id+"\n")
         print search_term.rstrip(), ":", course_ids
     if not found:
         print search_term.rstrip(), ": Not found"
