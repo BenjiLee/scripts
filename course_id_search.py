@@ -25,9 +25,9 @@ def find_course_data(course_file, search_term):
 def main():
     parser = argparse.ArgumentParser()
     parser.usage = '''
-    {cmd} -f path/to/file -c course_key
+    {cmd} -d path/to/data -c course_key
     '''.format(cmd=sys.argv[0])
-    parser.add_argument('-f', '--file', help='Path to file', default='')
+    parser.add_argument('-d', '--file', help='Path to data', default='')
     parser.add_argument('-c', '--course', help='Course key', default='')
     parser.add_argument('-i', '--courses', type=argparse.FileType('rb'), default=None)
 
