@@ -21,14 +21,15 @@ def compare_youtube(file_path):
             try:
                 comparison = compare_times(urls[1].rstrip("\n"), urls[3].rstrip("\n"))
                 if comparison == "Match":
-                    pass
+                    print line.rstrip("\n")
+                    print comparison
                 else:
-                    print line
+                    print line.rstrip("\n")
                     print comparison
             except Exception as e:
                 print line
                 print "Exception", e
-
+            time.sleep(1)
 
 def compare_times(studio, VAL):
     compare_to = None
