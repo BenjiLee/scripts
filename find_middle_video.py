@@ -10,7 +10,7 @@ import constants
 class MobileApi(object):
 
     def __init__(self):
-        self.url = "https://courses.edx.org"
+        self.url = "http://localhost:8000"
         self.mobile_api_url = '{}/api/mobile/v0.5/video_outlines/courses'.\
             format(self.url)
         self.sess = requests.Session()
@@ -60,7 +60,7 @@ class MobileApi(object):
         middle_video = len(json_data)/2
         video_id = json_data[middle_video]["summary"]["id"]
 
-        print "'{}': '{}',".format(course.strip(), video_id.split("video/")[1])
+        print "'{}': '{}',".format(course.strip(), video_id)
 
 
 
